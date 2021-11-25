@@ -211,3 +211,58 @@ myElement.children;
 
 //todo Get all the elements that have a certain class
 var allclass = document.getElementsByClassName("class")
+
+//!Sergio Bermúdez
+
+function getElemClasses() {
+    let allElems = document.getElementsByClassName('allElems');
+    for (const elem of allElems) {
+        elem.style.fontWeight = 'bold';
+    }
+}
+
+function getElemId() {
+    let elem = document.getElementById('elem');
+    elem.style.fontWeight = 'bold';
+}
+
+function getElemsNoneClass() {
+    let allElems = document.getElementsByClassName('allElems');
+    for (const elem of allElems) {
+        if(elem.style.display == 'none') {
+            elem.style.display = 'block';
+            elem.style.color = 'red';
+        }
+    }
+}
+
+function getOptionsSelected() {
+    let allElems = document.querySelectorAll('option[selected]');
+}
+
+function getFirstA() {
+    let firstA = document.querySelector('a');
+    firstA.href = 'AAA';
+}
+
+function getFirstInput() {
+    let firstA = document.querySelector('input');
+    alert('firstA');
+}
+
+function removeAllElems() {
+    let allElems = document.querySelectorAll('.allElems');
+    for(const elem of allElems) {
+        elem.remove();
+    };
+}
+
+function animation() {
+    document.addEventListener('DOMContentLoaded', function (params) {
+        let animationHTML = document.getElementById('animation');
+        setTimeout(() => {
+            animationHTML.style.animationName = 'example';
+            animationHTML.style.animationDuration = '2s';
+        }, 2000);
+    })
+}

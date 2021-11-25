@@ -168,3 +168,52 @@ $(".inner").append("<p>Test</p>");
 
 /* Prepend an HTML element with any text value to a parent element */
 $(".inner").prepend("<p>Test</p>");
+//!Roger puigdemasa
+
+//!Sergio Bermúdez
+
+function getElemClasses() {
+    $('.allElems').css('font-weight', 'bold');
+}
+
+function getElemId() {
+    $('.elem').css('font-weight', 'bold');
+}
+
+function getElemsNoneClass() {
+    $('.elem').each(function(index, element) {
+        if($(this).css('display') == 'none') {
+            $(this).css('display', 'block');
+            $(this).css('color', 'red');
+        }
+    });
+}
+
+function getOptionsSelected() {
+    $('option[selected]');
+}
+
+function getFirstA() {
+    let firstA = $('a').first();
+    firstA.attr('href', 'nuevoSrc');
+}
+
+function getFirstInput() {
+    let firstA = $('input').first();
+    alert('firstA');
+}
+
+function removeAllElems() {
+    $('.allElems').remove();
+}
+
+function animation() {
+    $(document).ready( function(params) {
+        setTimeout(() => {
+            $('#animation').css('animation-name','example');
+            $('#animation').css('animation-duration','2s');
+        }, 2000);
+    })
+}
+
+animation();
