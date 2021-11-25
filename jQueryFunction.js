@@ -31,23 +31,33 @@ $("myBtn").attr("disabled", false);
 $('img').attr("data-src", "foobar");
 
 //!Roger puigdemasa
-//remove data-src attribute
+
+//todo remove data-src attribute
 $(button).on("click",function(){$(imgElement).removeData('src');})
-//hide
+
+//todo hide
 $(button).on("click",function(){$(selector).hide();})
-//show
+
+//todo show
 $(button).on("click",function(){$(selector).show();})
-//fadeIn
+
+//todo fadeIn
 $(button).on("click",function(){$(selector).fadeIn();})
-//fadeOut
+
+//todo fadeOut
 $(button).on("click",function(){$(selector).fadeOut();})
-//Iterate a collection of elements
+
+//todo Iterate a collection of elements
 $(selector).each( function (indexInArray, valueOfElement) {
+
     $(this).css({"borde":"1px solid black"})
 });
-//Get the parent element
+//todo Get the parent element
 $(Selection).parent()
-//Get the parent element
+
+//todo Get the parent element
 $(Selection).children()
-//Get all the elements that have a certain class
+
+//todo Get all the elements that have a certain class
 $(".class")
+
