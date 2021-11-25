@@ -69,6 +69,102 @@ function imageNotFound() {
     alert('That image was not found.');
 }
 
+//!Garikoitz Herrero 
+
+//todo When a form is submitted
+document.getElementById("myForm").submit();
+
+//todo When the user changes the option of a select element -
+
+
+//todo <select onchange = "myFunction()" ><p id = "demo" > < /p> */
+
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+
+//todo When you position the mouse over an element
+
+
+document.getElementById("demo").onmouseover = function () {
+    mouseOver()
+};
+document.getElementById("demo").onmouseout = function () {
+    mouseOut()
+};
+
+function mouseOver() {
+    document.getElementById("demo").style.color = "red";
+}
+
+function mouseOut() {
+    document.getElementById("demo").style.color = "black";
+}
+
+//todo When a checkbox is checked or unchecked
+function validate() {
+    if (document.getElementById('X').checked) {
+        alert("checked");
+    } else {
+        alert("You didn't check it!");
+    }
+}
+//todo When a ul list item is clicked, show the item that was clicked
+
+$('li.submenu a[href="#"]').click(function (e) {
+    e.preventDefault();
+    $("ul.ul_submenu").css("display", "block");
+})
+
+//todo Create an HTML element with any text value
+document.createElement("BUTTON");
+
+//todo Remove an HTML element with any text value */
+var myobj = document.getElementById("demo");
+myobj.remove();
+
+//todo Append an HTML element with any text value to a parent element */
+let div = document.createElement("div")
+let p = document.createElement("p")
+div.append(p)
+
+//todo Prepend an HTML element with any text value to a parent element */
+let div = document.createElement("div");
+let span = document.createElement("span");
+div.prepend(span);
+
+//todo remove data-src attribute
+var imgElement = document.getElementById('');
+imgElement.removeAttribute('data-src');
+
+//todo hide
+var Elemen = document.getElementById('');
+GamepadButton.addEventListener("click", function () {
+    Elemen.style.display = 'none';
+})
+
+//todo show
+GamepadButton.addEventListener("click", function () {
+    Elemen.style.display = 'block';
+})
+
+//todo Iterate a collection of elements
+var arr = document.getElementById('');
+for (const a of arr) {
+    a.style.border = " 1px solid black"
+}
+//todo Get the parent element
+var el = document.getElementById('');
+el.closest();
+
+//todo Get the collection of children
+var myElement = document.getElementById('');
+myElement.children;
+
+//todo Get all the elements that have a certain class
+var allclass = document.getElementsByClassName("class")
+
 
 //! Jefferson    Bertinoti
 //todo Create and add an HTML element with any text value after another element
@@ -112,105 +208,6 @@ image.src = '/img/img1.jpg';
 image.setAttribute('data-src', 'foobar');
 document.body.appendChild(image);
 
-//!Roger puigdemasa
-
-//!Garikoitz Herrero 
-
-/* When a form is submitted
- */
-document.getElementById("myForm").submit();
-
-/* When the user changes the option of a select element -
- */
-
-/* <select onchange = "myFunction()" >
-    <p id = "demo" > < /p> */
-
-function myFunction() {
-    var x = document.getElementById("mySelect").value;
-    document.getElementById("demo").innerHTML = "You selected: " + x;
-}
-
-/* When you position the mouse over an element
- */
-
-document.getElementById("demo").onmouseover = function () {
-    mouseOver()
-};
-document.getElementById("demo").onmouseout = function () {
-    mouseOut()
-};
-
-function mouseOver() {
-    document.getElementById("demo").style.color = "red";
-}
-
-function mouseOut() {
-    document.getElementById("demo").style.color = "black";
-}
-
-/* When a checkbox is checked or unchecked
- */
-function validate() {
-    if (document.getElementById('X').checked) {
-        alert("checked");
-    } else {
-        alert("You didn't check it!");
-    }
-}
-/* When a ul list item is clicked, show the item that was clicked
- */
-$('li.submenu a[href="#"]').click(function (e) {
-    e.preventDefault();
-    $("ul.ul_submenu").css("display", "block");
-})
-
-/* Create an HTML element with any text value */
-document.createElement("BUTTON");
-
-/* Remove an HTML element with any text value */
-var myobj = document.getElementById("demo");
-myobj.remove();
-
-/* Append an HTML element with any text value to a parent element */
-let div = document.createElement("div")
-let p = document.createElement("p")
-div.append(p)
-
-/* Prepend an HTML element with any text value to a parent element */
-let div = document.createElement("div");
-let span = document.createElement("span");
-div.prepend(span);
-//todo remove data-src attribute
-var imgElement = document.getElementById('');
-imgElement.removeAttribute('data-src');
-
-//todo hide
-var Elemen = document.getElementById('');
-GamepadButton.addEventListener("click", function () {
-    Elemen.style.display = 'none';
-})
-
-//todo show
-GamepadButton.addEventListener("click", function () {
-    Elemen.style.display = 'block';
-})
-
-//todo Iterate a collection of elements
-var arr = document.getElementById('');
-for (const a of arr) {
-    a.style.border = " 1px solid black"
-}
-//todo Get the parent element
-var el = document.getElementById('');
-el.closest();
-
-//todo Get the collection of children
-var myElement = document.getElementById('');
-myElement.children;
-
-//todo Get all the elements that have a certain class
-var allclass = document.getElementsByClassName("class")
 
 //!Sergio Bermúdez
 
@@ -229,7 +226,7 @@ function getElemId() {
 function getElemsNoneClass() {
     let allElems = document.getElementsByClassName('allElems');
     for (const elem of allElems) {
-        if(elem.style.display == 'none') {
+        if (elem.style.display == 'none') {
             elem.style.display = 'block';
             elem.style.color = 'red';
         }
@@ -252,7 +249,7 @@ function getFirstInput() {
 
 function removeAllElems() {
     let allElems = document.querySelectorAll('.allElems');
-    for(const elem of allElems) {
+    for (const elem of allElems) {
         elem.remove();
     };
 }

@@ -41,6 +41,55 @@ $('#image1')
         $('#result1').text('Image is not loaded!');
     });
 
+//!Garikoitz Herrero
+
+//todo When a form is submitted */
+$("#target").submit(function (event) {
+    alert("Handler for .submit() called.");
+    event.preventDefault();
+});
+
+//todo When the user changes the option of a select element -
+/* <form >
+    <input class = "target"type = "text"value = "Field 1" >
+    <select class = "target" >
+    <option value = "option1"selected = "selected" > Option 1 </option> 
+    <option value = "option2" > Option 2 < /option> 
+    < /select> 
+</form> */
+$(".target").change(function () {
+    alert("Handler for .change() called.");
+});
+
+//todo When you position the mouse over an element */
+$("#outer").mouseover(function () { })
+
+//todo When a checkbox is checked or unchecked */
+$(".checkbox").change(function () {
+    if (this.checked) {
+        //Do stuff}
+    }
+})
+
+//todo When a ul list item is clicked, show the item that was clicked*/
+
+$('li.submenu a[href="#"]').click(function (e) {
+    e.preventDefault();
+    $("ul.ul_submenu").css("display", "block");
+})
+
+//todo Create an HTML element with any text value */
+$("<div></div>")
+
+//todo Remove an HTML element with any text value */
+$(".hello").remove();
+
+//todo Append an HTML element with any text value to a parent element */
+$(".inner").append("<p>Test</p>");
+
+//todo Prepend an HTML element with any text value to a parent element */
+$(".inner").prepend("<p>Test</p>");
+
 //! Jefferson    Bertinoti
 //todo Create and add an HTML element with any text value after another element
 var el = $("<span>" + 'text ' + "<span>");
@@ -116,60 +165,6 @@ $(Selection).children()
 //todo Get all the elements that have a certain class
 $(".class")
 
-//!Roger puigdemasa
-
-//!Garikoitz Herrero
-
-/* When a form is submitted
- */
-$("#target").submit(function (event) {
-    alert("Handler for .submit() called.");
-    event.preventDefault();
-});
-/* When the user changes the option of a select element -
- */
-/* <form >
-    <input class = "target"type = "text"value = "Field 1" >
-    <select class = "target" >
-    <option value = "option1"selected = "selected" > Option 1 </option> 
-    <option value = "option2" > Option 2 < /option> 
-    < /select> 
-</form> */
-$(".target").change(function () {
-    alert("Handler for .change() called.");
-});
-/* When you position the mouse over an element
- */
-$("#outer").mouseover(function () {})
-
-/* When a checkbox is checked or unchecked */
-$(".checkbox").change(function () {
-    if (this.checked) {
-        //Do stuff}
-    }
-})
-
-/* When a ul list item is clicked, show the item that was clicked
- */
-
-$('li.submenu a[href="#"]').click(function (e) {
-    e.preventDefault();
-    $("ul.ul_submenu").css("display", "block");
-})
-
-/* Create an HTML element with any text value */
-$("<div></div>")
-
-/* Remove an HTML element with any text value */
-$(".hello").remove();
-
-/* Append an HTML element with any text value to a parent element */
-$(".inner").append("<p>Test</p>");
-
-/* Prepend an HTML element with any text value to a parent element */
-$(".inner").prepend("<p>Test</p>");
-//!Roger puigdemasa
-
 //!Sergio Bermúdez
 
 function getElemClasses() {
@@ -181,8 +176,8 @@ function getElemId() {
 }
 
 function getElemsNoneClass() {
-    $('.elem').each(function(index, element) {
-        if($(this).css('display') == 'none') {
+    $('.elem').each(function (index, element) {
+        if ($(this).css('display') == 'none') {
             $(this).css('display', 'block');
             $(this).css('color', 'red');
         }
@@ -208,12 +203,14 @@ function removeAllElems() {
 }
 
 function animation() {
-    $(document).ready( function(params) {
+    $(document).ready(function (params) {
         setTimeout(() => {
-            $('#animation').css('animation-name','example');
-            $('#animation').css('animation-duration','2s');
+            $('#animation').css('animation-name', 'example');
+            $('#animation').css('animation-duration', '2s');
         }, 2000);
     })
 }
 
 animation();
+
+
